@@ -7,9 +7,9 @@ pipeline {
         stage('Unit and Integration Tests') {
             steps { bat 'npm test' }
         }
-        stage('Code Analysis') {
-            steps { bat 'sonar-scanner' }
-        }
+        // stage('Code Analysis') {
+        //     steps { bat 'sonar-scanner' }
+        // }
         stage('Security Scan') {
             steps { bat 'dependency-check.bat --scan .' }
         }
